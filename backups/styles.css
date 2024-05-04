@@ -6,25 +6,13 @@
   --green: #4cbd97;
   --purple: #8d51a0;
   --blue: #4ca0d8;
-
 }
 
 body {
-
-  margin: 0 30%;
   font-family: 'courier prime';
   font-size: 18px;
   background-color: var(--dark);
-  color: var(--light);
-  border-left:  2px solid var(--purple);
-  border-right: 2px solid var(--purple);
-  padding: 5%;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  box-shadow: 0 0 12px;
+  color: var(--light)
 }
 
 input, textarea {
@@ -33,7 +21,7 @@ input, textarea {
   font-size: 18px;
   line-height: 1.5;
   background-color: transparent;
-  border: none;
+  border: none
 }
 
 .red {
