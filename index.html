@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudocode Your Day</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="date-container"> <!-- container for date -->
+      <p id="today-is">Today is: </p>
+      <p id="date">Tuesday, May 34th, 2024</p>
+    </div>
+
+    <div> <!-- container for logo thing -->
+      <h1>// pseudo-code</h1>
+      <h2>your day</h2>
+    </div>
+  </header>
+
+  <main>
+    <form> <!-- the whole main is just one big form -->
+      <input id="snippet-name" class="snippet-name" placeholder="Name this snippet"> <!-- Snippet title -->
+
+      <!-- These note sections will be deleted, they are just here to get the structure/styles set up but will actually be constructed with JavaScript -->
+
+      <!-- Section for a normal note -->
+      <section class="note-container">
+        <p class="red">/*</p>
+        <textarea class="" placeholder="What are you thinking about?"></textarea>
+        <p class="red">*/</p>
+      </section>
+
+      <!-- Section for a function note -->
+      <section class="note-container function"> 
+        <p class="yellow">function</p>
+        <input id="function-note-name" placeholder="function name">
+        <p class="yellow">{</p>
+        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
+        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
+        <input type="checkbox"><input id="function-note-name"
+        placeholder="to do...">
+        <!-- need to add a button here that generates a new checkbox -->
+        <p class="yellow">}</p>
+      </section>
+
+      <!-- Section for a for note -->
+      <section class="note-container for">
+        <p class="green">for (let day = </p>
+        <input id="for-start" placeholder="start date">
+        <p class="green">; day <= </p>
+        <input id="for-end" placeholder="end date">
+        <p class="green">; day++) {</p>
+        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
+        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
+        <input type="checkbox"><input id="function-note-name" placeholder="to do...">
+        <p class="green">}</p>
+      </section>
+
+      <!-- Section for a while note -->
+      <section class="note-container while">
+        <p class="blue">while (! </p>
+        <input id="while-goal" placeholder="goal">
+        <p class="blue"> ) {</p>
+        <textarea class="" placeholder="What are you thinking about?"></textarea>
+        
+        <p class="blue">}</p>
+
+      </section>
+
+      <!-- Section for an if note -->
+      <section class="note-container if"> 
+
+      </section>
+    </form>
+  </main>
+  <footer>
+    <div> <!-- container for add-note buttons-->
+
+    </div>
+    <div> <!-- container for new, saved, help buttons -->
+
+    </div>
+  </footer>
+  
+</body>
+</html>
