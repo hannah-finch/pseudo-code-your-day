@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pseudocode Your Day</title>
+  <title>Pseudo-code Your Day</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/styles.css">
@@ -28,9 +28,10 @@
 
   <main>
     <form> <!-- the whole main is just one big form -->
-      <input id="snippet-name" class="snippet-name" placeholder="Name this snippet"> <!-- Snippet title -->
+      <input id="snippet-name" placeholder="Name this snippet"> <!-- Snippet title -->
 
       <!-- These note sections will be deleted, they are just here to get the structure/styles set up but will actually be constructed with JavaScript -->
+      <!-- Each note section needs the three buttons to move or delete the note -->
 
       <!-- Section for a normal note -->
       <section class="note-container">
@@ -40,14 +41,15 @@
       </section>
 
       <!-- Section for a function note -->
-      <section class="note-container function"> 
+      <section class="note-container"> 
         <p class="yellow">function</p>
-        <input id="function-note-name" placeholder="function name">
+        <input id="function-01" placeholder="function name">
         <p class="yellow">{</p>
-        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
-        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
-        <input type="checkbox"><input id="function-note-name"
+        <input type="checkbox"><input id="function-check" placeholder="to do..."> <br>
+        <input type="checkbox"><input id="function-check" placeholder="to do..."> <br>
+        <input type="checkbox"><input id="function-check"
         placeholder="to do...">
+        <!-- I'm not sure what to do about the id's for checkboxes here and in a 'for' note, cause I wonder if they'll need to be id'd individually to save, but also need to be generated one at a time with JavaScript... Maybe setAttribute.id('[i]') or something? -->
         <!-- need to add a button here that generates a new checkbox -->
         <p class="yellow">}</p>
       </section>
@@ -55,32 +57,85 @@
       <!-- Section for a for note -->
       <section class="note-container for">
         <p class="green">for (let day = </p>
-        <input id="for-start" placeholder="start date">
+        <input id="for-01" placeholder="start date">
         <p class="green">; day <= </p>
-        <input id="for-end" placeholder="end date">
+        <input id="for-02" placeholder="end date">
         <p class="green">; day++) {</p>
-        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
-        <input type="checkbox"><input id="function-note-name" placeholder="to do..."> <br>
-        <input type="checkbox"><input id="function-note-name" placeholder="to do...">
+        <input type="checkbox"><input class="for-check" placeholder="to do..."> <br>
+        <input type="checkbox"><input class="for-check" placeholder="to do..."> <br>
+        <input type="checkbox"><input class="for-check" placeholder="to do...">
+        <!-- need to add a button here that generates a new checkbox -->
         <p class="green">}</p>
       </section>
 
       <!-- Section for a while note -->
       <section class="note-container while">
         <p class="blue">while (! </p>
-        <input id="while-goal" placeholder="goal">
+        <input id="while-01" placeholder="goal">
         <p class="blue"> ) {</p>
-        <textarea class="" placeholder="What are you thinking about?"></textarea>
-        
+        <textarea id="while-02" placeholder="While I'm working toward that goal..."></textarea>
         <p class="blue">}</p>
-
       </section>
 
       <!-- Section for an if note -->
-      <section class="note-container if"> 
-
+      <section class="note-container if">
+        <p class="purple">if ( </p>
+        <input id="if-01" placeholder="qualifier">
+        <p class="purple"> ) {</p>
+        <textarea id="if-02" placeholder="I will do this..."></textarea>
+        <p class="purple">} else {</p>
+        <textarea id="if-03" placeholder="I will do that..."></textarea>
+        <p class="purple">}</p>
       </section>
+
     </form>
+
+    <section class="bar">
+      <div class="buttons"> <!-- container for all add-note buttons-->
+        <div class="button-label-container">
+          <div class="button" id="note-button"></div>
+          <p class="button-label">note</p>
+        </div>
+
+        <div class="button-label-container">
+          <div class="button" id="function-button"></div>
+          <p class="button-label">function</p>
+        </div>
+
+        <div class="button-label-container">
+          <div class="button" id="for-button"></div>
+          <p class="button-label">for loop</p>
+        </div>
+
+        <div class="button-label-container">
+          <div class="button" id="while-button"></div>
+          <p class="button-label">while loop</p>
+        </div>
+
+        <div class="button-label-container">
+          <div class="button" id="if-button"></div>
+          <p class="button-label">if/else</p>
+        </div>
+      </div>
+
+      <div> <!-- container for new, saved, help buttons -->
+        <div class="button-label-container">
+          <div class="button" id="new-button"></div>
+          <p class="button-label">new</p>
+        </div>
+
+        <div class="button-label-container">
+          <div class="button" id="past-button"></div>
+          <p class="button-label">past</p>
+        </div>
+
+        <div class="button-label-container">
+          <div class="button" id="help-button"></div>
+          <p class="button-label">help</p>
+        </div>
+      </div>
+
+    </section>
   </main>
   <footer>
     <div> <!-- container for add-note buttons-->

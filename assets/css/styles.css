@@ -44,7 +44,7 @@ input, textarea {
   color: var(--blue);
 }
 
-.snippet-name {
+#snippet-name {
   color: var(--blue);
   font-size: 26px;
 
