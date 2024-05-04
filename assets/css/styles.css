@@ -1,0 +1,51 @@
+:root {
+  --light: #fffcf9;
+  --dark: #151325;
+  --red: #ef476f;
+  --yellow: #ffd167;
+  --green: #4cbd97;
+  --purple: #8d51a0;
+  --blue: #4ca0d8;
+}
+
+body {
+  font-family: 'courier prime';
+  font-size: 18px;
+  background-color: var(--dark);
+  color: var(--light)
+}
+
+input, textarea {
+  color: var(--light);
+  font-family: 'Indie Flower';
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: transparent;
+  border: none
+}
+
+.red {
+ color: var(--red);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.green {
+  color: var(--green);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.snippet-name {
+  color: var(--blue);
+  font-size: 26px;
+
+}
