@@ -6,25 +6,60 @@
   --green: #4cbd97;
   --purple: #8d51a0;
   --blue: #4ca0d8;
-
 }
 
-body {
+/* Text styles -------------- */
+h1 {
+  font-size: 200%;
+  color: var(--green)
+}
 
-  margin: 0 30%;
+h2 {
+  font-family: "Indie flower";
+  font-size: 150%;
+  color: var(--blue);
+}
+
+/* Header styles ------------- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 12px #00000061;
+  padding: 45px 5% 30px;
+}
+
+.date-container {
+  display: flex;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#today-is {
+  color: var(--red);
+  margin-right: 20px;
+}
+
+#date {
+  font-family: "Indie flower"
+}
+
+/* General styles -------- */
+body {
   font-family: 'courier prime';
   font-size: 18px;
   background-color: var(--dark);
   color: var(--light);
-  border-left:  2px solid var(--purple);
-  border-right: 2px solid var(--purple);
-  padding: 5%;
 }
 
-header {
+main {
   display: flex;
-  justify-content: space-between;
-  box-shadow: 0 0 12px;
+  flex-direction: column;
+  align-items: center;
 }
 
 input, textarea {
