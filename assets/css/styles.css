@@ -11,12 +11,15 @@
 /* Text styles -------------- */
 h1 {
   font-size: 200%;
-  color: var(--green)
+  color: var(--green);
+  font-family: 'courier prime';
+  line-height: .5;
+
 }
 
 h2 {
   font-family: "Indie flower";
-  font-size: 150%;
+  font-size: 160%;
   color: var(--blue);
 }
 
@@ -26,11 +29,8 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 12px #00000061;
-  padding: 45px 5% 30px;
-}
-
-.date-container {
-  display: flex;
+  padding: 30px 5%;
+  margin-bottom: 40px;
 }
 
 .logo-container {
@@ -39,60 +39,126 @@ header {
   align-items: flex-end;
 }
 
-#today-is {
-  color: var(--red);
-  margin-right: 20px;
-}
-
-#date {
-  font-family: "Indie flower"
-}
-
 /* General styles -------- */
 body {
-  font-family: 'courier prime';
+  font-family: 'Indie flower';
   font-size: 18px;
+  line-height: 1.5;
   background-color: var(--dark);
   color: var(--light);
+  caret-color: var(--red);
+  caret: 2px;
 }
 
 main {
+  margin: 0 30%;
+}
+
+/* note styles ---------- */
+.note {
+  margin: 30px 0;
+}
+
+.red, .yellow, .green, .blue, .purple {
+  display: inline;
+}
+
+input, .margin {
+  margin-left: 30px;
+}
+
+.red::before {
+  content: attr(placeholder);
+  color: var(--red);
+  font-family: 'courier prime';
+}
+
+.yellow::before {
+  content: attr(placeholder);
+  color: var(--yellow);
+  font-family: 'courier prime';
+}
+
+.green::before {
+  content: attr(placeholder);
+  color: var(--green);
+  font-family: 'courier prime';
+}
+
+.blue::before {
+  content: attr(placeholder);
+  color: var(--blue);
+  font-family: 'courier prime';
+}
+
+.purple::before {
+  content: attr(placeholder);
+  color: var(--purple);
+  font-family: 'courier prime';
+}
+
+/* bottom bar styles-------- */
+.button {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: 2px solid var(--light);
+}
+
+.bar {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--dark);
+  box-shadow: 0 0 12px #00000061;
+  width: 100%;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+.side-buttons {
+  display: flex;
+}
+
+.button-label-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-input, textarea {
-  color: var(--light);
-  font-family: 'Indie Flower';
-  font-size: 18px;
-  line-height: 1.5;
-  background-color: transparent;
-  border: none;
+.button {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.red {
- color: var(--red);
+.button-label {
+  /* display: none; */
+  /* position: absolute; */
+  text-align: center;
 }
 
-.yellow {
-  color: var(--yellow);
+.button:hover {
+  border-color: var(--dark)
 }
 
-.green {
-  color: var(--green);
+#comment-button {
+  background-color: var(--red);
 }
-
-.purple {
-  color: var(--purple);
+#function-button {
+  background-color: var(--yellow);
 }
-
-.blue {
-  color: var(--blue);
+#for-button {
+  background-color: var(--green);
 }
-
-#snippet-name {
-  color: var(--blue);
-  font-size: 26px;
-
+#while-button {
+  background-color: var(--blue);
+}
+#if-button {
+  background-color: var(--purple);
 }
